@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace net_calculator_tester
 {
-    internal class Calculator
+    public class Calculator
     {
         public float Add(float num1, float num2)
         {
@@ -30,6 +30,7 @@ namespace net_calculator_tester
 
         public float Multiply(float num1, float num2)
         {
+            if (num2 == 0) throw new Exception("Una numero diviso per 0 non produce alcun risultato");
             return num1 * num2;
         }
     }
